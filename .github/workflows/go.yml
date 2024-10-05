@@ -13,8 +13,8 @@ jobs:
       - name: Vet
         run: |
           go vet ./...
-          
 
+          
   deploy:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
@@ -37,8 +37,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: <Docker ID>/hello-golang
-
+          images: arturchick/final-main-hw
       - name: Build and push Docker Image
         uses: docker/build-push-action@v5
         with:
