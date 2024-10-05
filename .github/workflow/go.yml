@@ -13,6 +13,7 @@ jobs:
       - name: Vet
         run: |
           go vet ./...
+          
 
   deploy:
     name: Push Docker image to Docker Hub
