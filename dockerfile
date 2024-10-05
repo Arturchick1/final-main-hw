@@ -3,4 +3,5 @@ WORKDIR /final-main-hw
 COPY . .
 RUN go mod tidy
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./...
+
 CMD ["/final-main-hw"]
